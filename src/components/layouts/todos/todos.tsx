@@ -5,19 +5,22 @@ import styles from './todos.module.scss'
 import ava from '../../../test.jpg'
 
 
-export interface todos{
-    data:TodoEntity
+export interface todos {
+    data: TodoEntity
 }
 
-export const Todos:FunctionComponent<todos>=(props)=>{
-    return(
+export const Todos: FunctionComponent<todos> = (props) => {
+    return (
         <div className={styles.todo}>
             <React.Fragment key={props.data.id}>
-                <img src={ava} className={styles.avatar}/>
-               <div className={styles.info}>
-                   <div className={styles.title}>{props.data.title}</div>
-                   <div className={styles.content}>{props.data.content}</div>
-               </div>
+
+                <div className={styles.info}>
+                    <img src={ava} className={styles.avatar}/>
+                    <div className={styles.content_title}>
+                        <div className={styles.title}>{props.data.title}</div>
+                        <div className={styles.content}>{props.data.content}</div>
+                    </div>
+                </div>
                 <div>{props.data.creationDate}</div>
             </React.Fragment>
         </div>

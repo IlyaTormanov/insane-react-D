@@ -11,7 +11,7 @@ export interface todoListProps {
 
 export const TodoList: FunctionComponent<todoListProps> = () => {
     const todos = useSelector((state: RootState) => state.todo.addTodo)
-
+        console.log(todos)
     return (
 
         <div className={styles.container}>

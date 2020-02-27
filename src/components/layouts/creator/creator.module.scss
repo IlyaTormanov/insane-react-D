@@ -1,0 +1,11 @@
+.creator{
+  display:grid;
+  max-width:600px;
+  padding:30px;
+  box-sizing: border-box;
+  grid-row-gap: 20px;
+  -webkit-box-shadow: 2px 3px 10px 0px rgba(120,120,120,1);
+  -moz-box-shadow: 2px 3px 10px 0px rgba(120,120,120,1);
+  box-shadow: 2px 3px 10px 0px rgba(120,120,120,1);
+  height:100% !important;
+}

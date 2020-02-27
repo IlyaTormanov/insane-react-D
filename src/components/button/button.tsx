@@ -1,10 +1,11 @@
 import * as React from 'react'
 import {FunctionComponent} from "react";
-import Omit = jest.Omit;
+import styles from './button.module.scss'
 
-export interface ButtonProps extends HTMLButtonElement{
+export interface ButtonProps {
     content:String,
-    onClick:()=>void
+    onClick:()=>void,
+    type:"button"|'submit'
 }
 
 // export interface Ent{
@@ -24,7 +25,7 @@ export interface ButtonProps extends HTMLButtonElement{
 // }
 export const Button:FunctionComponent<ButtonProps>=(props)=>{
     return(
-        <button onClick={props.onClick} >{props.content}</button>
+        <button onClick={props.onClick} type={props.type} className={styles.button}>{props.content}</button>
     )
 }
 

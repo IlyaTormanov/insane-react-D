@@ -1,27 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {TodoList} from "./todoList";
-import {todoItem} from "./redux/actions";
-import {Input} from "./components/Input";
+import {TodoList} from "./components/layouts/todos/todoList";
 
-export const todoEntity:todoItem={
-  id:0,
-  userId:0,
-  title:"",
-  creationDate:0,
-  content:""
-}
+import {TodoCreator} from "./components/layouts/creator/todoCreator";
+import {Input} from "./components/input/Input";
+import {useSelector} from "react-redux";
+import {RootState} from "./redux/rootTypes";
 
 function App() {
-  console.log(todoEntity)
-  const [todo,setTodo]=useState<todoItem>(todoEntity)
-  const changesTodo=(changes:any)=>setTodo(changes)
-  console.log(todo)
+
   return (
     <div className="App">
-      <Input onChange={value => changesTodo(value)}/>
-      <TodoList/>
+        <TodoCreator/>
+      <TodoList />
     </div>
   );
 }

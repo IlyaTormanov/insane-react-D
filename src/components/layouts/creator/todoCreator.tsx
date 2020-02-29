@@ -25,7 +25,7 @@ export const TodoCreator:FunctionComponent<todoCreator>=()=>{
         const pusher=(value:Object)=>setChange(mergeObject(value))
         const dispatch=useDispatch()
     const todosList=useSelector((state:RootState)=>state.todo.addTodo)
-    return(
+    return(geerg
         <div className={styles.creator}>
                 <Input onChange={value => pusher({title:value})} placeholder={'title'}/>
                 <Input onChange={value => pusher({content:value})} placeholder={'content'}/>
